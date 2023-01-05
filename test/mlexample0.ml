@@ -195,7 +195,7 @@ let f man =
     printf "hash top = exception %s@." (Printexc.to_string exn)
   end;
   begin try
-    printf "compare bottom top = %i@." (Pervasives.compare abs1 abs2)
+    printf "compare bottom top = %i@." (Stdlib.compare abs1 abs2)
   with _ as exn ->
     printf "compare bottom top = exception %s@." (Printexc.to_string exn)
   end;
