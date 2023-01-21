@@ -72,7 +72,7 @@ value camlidl_apron_scalar_c2ml(struct ap_scalar_t* scalar)\n\
   default:\n\
     caml_failwith(\"unknown scalar discriminant in camlidl_apron_scalar_c2ml\");\n\
   }\n\
-  v = alloc_small(1,scalar->discr);\n\
+  v = caml_alloc_small(1,scalar->discr);\n\
   Field(v,0) = v2;\n\
   End_roots();\n\
   return v;\n\
